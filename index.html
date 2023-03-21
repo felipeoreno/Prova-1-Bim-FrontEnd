@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Prova 1º Bimestre</title>
+</head>
+<body class="bg-light-subtle">
+    <nav class="navbar bg-body-primary bg-success-subtle">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/img/logo.png" alt="Logo" width="30" class="d-inline-block align-text-top">
+            Minha Escola
+          </a>
+        </div>
+    </nav>
+
+    <!-- TABELA -->
+    <main>
+        <section class="container bg-body-secondary rounded p-2 m-2">
+            <h2>Alunos</h2>
+            <table class="table table-bordered table-light">
+                <thead class="table-primary">
+                    <tr>
+                        <th id="col_alunos">Nome do aluno</th>
+                        <th>Turma</th>
+                        <th>Data de matrícula</th>
+                        <th>Status do pagamento</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela_alunos" class="table-hover">
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Total de alunos</td>
+                        <td colspan="3" id="total_alunos"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <!-- FORMULÁRIO -->
+        <section class="container bg-body-secondary rounded p-2 m-2">
+            <h2>Adicionar Aluno</h2>
+            <ul id="mensagens_erro"></ul>
+            <form id="form_alunos">
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome:</label>
+                    <input id="nome"
+                    class="form-control"
+                    type="text"
+                    placeholder="Digite o nome do aluno">
+                </div>
+                <div class="row">
+                    <div class="mb-3 col">
+                        <label for="turma" class="form-label">Turma:</label>
+                        <select id="turma"
+                        class="form-select">
+                            <option selected disabled>Selecione uma turma</option>
+                            <option value="1º ano N.E.M.">1º ano N.E.M.</option>
+                            <option value="2º ano N.E.M.">2º ano N.E.M.</option>
+                            <option value="3º ano N.E.M.">3º ano N.E.M.</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="data_matricula" class="form-label">Data de matrícula:</label>
+                        <input id="data_matricula"
+                        class="form-control"
+                        type="date">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="status_pagamento" class="form-label">Status de pagamento:</label>
+                    <select id="status_pagamento"
+                    class="form-select">
+                        <option selected disabled>Selecione uma opção de status</option>
+                        <option value="Pago">Pago</option>
+                        <option value="Pendente">Pendente</option>
+                    </select>
+                </div>
+
+                <button type="submit"
+                id="form_alunos_botao"
+                class="btn btn-primary">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="assets/js/totalAlunos.js"></script>
+    <script src="assets/js/adicionarAluno.js"></script>
+    <script src="assets/js/removerAluno.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+</body>
+</html>

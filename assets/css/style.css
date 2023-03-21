@@ -1,0 +1,20 @@
+main{
+    width: 65%;
+    position: relative;
+    transform: translate(25%, 0%);
+}
+
+.fadeOut {
+	opacity: 0;
+	transition: 0.5s;
+	border-color: rgba(0, 0, 0, 0);
+}
+
+#mensagens_erro {
+	color: red;
+    list-style-type: none;
+}
+
+#total_alunos{
+    text-align: end;
+}
